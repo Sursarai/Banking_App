@@ -4,4 +4,4 @@ This Java app will first take in a user's name and the type of account that they
 - make a deposit
 - make a withdrawal
 - view previous transaction
-- calculate interest based on current interest rates
+- calculate interest on Savings account based on current interest rates
