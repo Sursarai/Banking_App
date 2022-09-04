@@ -10,13 +10,16 @@ public class BankApp {
         System.out.println("Enter the account type you would like: ");
         System.out.println("1.Savings Account\n2.Chequing Account");
         int type = scan.nextInt();
-
+        Account a1;
         if(type ==1){
-            Account a1 = new SavingsAccount(name, "Savings");
+            a1 = new SavingsAccount(name, "Savings");
         }
         else{
-            Account a2 = new ChequingAccount(name, "Chequing");
+            a1 = new ChequingAccount(name, "Chequing");
         }
+
+        a1.displayMenu();
+
 
 
 

@@ -14,5 +14,12 @@ public abstract class Account {
         idCounter++;
     }
 
+    public void displayMenu(){
+        System.out.println("Here are your options: ");
+        System.out.println("1. Check account balance");
+        System.out.println("2. Make a deposit");
+        System.out.println("3. Make a withdrawal");
+        System.out.println("4. View Previous Transaction");
+    }
 
 }
