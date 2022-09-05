@@ -18,7 +18,51 @@ public class BankApp {
             a1 = new ChequingAccount(name, "Chequing");
         }
 
-        a1.displayMenu();
+        boolean stay = true;
+        while(stay){
+            a1.displayMenu();
+            int option = scan.nextInt();
+            switch(option){
+                case 1:
+                    System.out.println("Your current balance is: $" + String.format("%.2f",a1.getBalance()) + "\n");
+                    break;
+                case 2:
+                    System.out.println("How much would you like to deposit?");
+                    double amountD = scan.nextDouble();
+                    a1.deposit(amountD);
+                    break;
+
+                case 3:
+                    System.out.println("How much would you like to withdraw?");
+                    double amountW = scan.nextDouble();
+                    a1.withdraw(amountW);
+                    break;
+                case 4:
+                    System.out.println(a1.viewPrevTransaction());
+                    System.out.println();
+                    break;
+                case 5:
+                    if(a1 instanceof SavingsAccount){
+                        // run interest function
+                    }
+                    else{
+                        // if chequing account, this is exit
+                        stay = false;
+                        break;
+                    }
+                case 6:
+                    if(a1 instanceof SavingsAccount){
+                        stay = false;
+                        break;
+                    }
+                default:
+                    System.out.println("Sorry invalid option. Please try again!");
+
+            }
+        }
+        System.out.println("Thank you for banking with us!");
+
+
 
 
 
