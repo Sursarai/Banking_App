@@ -43,7 +43,8 @@ public class BankApp {
                     break;
                 case 5:
                     if(a1 instanceof SavingsAccount){
-                        // run interest function
+                        System.out.println( ((SavingsAccount) a1).getInterestRate());
+                        break;
                     }
                     else{
                         // if chequing account, this is exit
